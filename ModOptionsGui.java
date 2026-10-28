@@ -568,7 +568,7 @@ public class ModOptionsGui extends GuiScreen {
             if (!show) continue;
             float cy = colorCardY(slot);
             for (int i = 0; i < SWATCHES; i++) {
-                float[] s = swatch(i, cy);
+                float[] sw = swatch(i, cy);
                 if (RenderUtil.hover(x, y, s[0] - s[2] - 2, s[1] - s[2] - 2, s[0] + s[2] + 2, s[1] + s[2] + 2)) {
                     Config.setInt("color." + key + "." + (slot == 0 ? "text" : "press"), i - 1);
                     Config.save();
